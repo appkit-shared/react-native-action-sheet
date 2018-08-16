@@ -1,11 +1,13 @@
 import {
   Platform
 } from 'react-native';
+import ActionSheetIos from './ActionSheetIos';
+import ActionSheetAndroid from './ActionSheetAndroid'
 
 let actionSheet
 if (Platform.OS === 'ios') {
-  actionSheet = require('./ActionSheetIos');
+  actionSheet = ActionSheetIos;
 } else {
-  actionSheet = require('./ActionSheetAndroid');
+  actionSheet = ActionSheetAndroid;
 }
 export default actionSheet
